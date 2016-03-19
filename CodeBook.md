@@ -1,10 +1,12 @@
 Assignment: Getting and Cleaning Data Course Project
 
 This document explain the procedure on getting and cleaning the data and how data is tidy up. Information was obtain via the following.
+
 The site where the data was obtained:
-http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+  http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
 Here are the data for the project:
-https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+  https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 Run analysis.R script performs the following steps to clean the data:
 
@@ -15,7 +17,11 @@ Run analysis.R script performs the following steps to clean the data:
 
 3	Read X_test.txt and y_test.txt file from ./UCI HAR Dataset/test and store to variable  X_test and y_test respectively.
 
-4	Join X_train  to X_test to generate data frame call joinData. Join y_train and y_test to generate data frame call joinLabel. Join subject_train to subject_test to generate data frame call joinSubject.
+4	Join X_train  to X_test to generate joinData  data frame. Join y_train and y_test to generate join Label data frame. Join subject_train to subject_test to generate joinSubject data frame.
+
+joinData  generate 10299x561 data frame
+joinSubject generate 10299x1 data frame
+join Label generate 10299x1 data frame
 
 5	Read features.txt file from the "/data" folder and store to variable features. We  want the measurements on the mean and standard deviation.
 
@@ -30,8 +36,6 @@ remove the symbols such as "()" and "-".
 
 10	Name the first two columns, "subject" and "activity. Combine joinSubject, joinLabel and joinData by column to get a data frame call arrangedata.
 
+arrangedata generate 10299x68 data frame
+
 11	Write the arrangeData out to “Output.txt” file in current working directory.
-
-12	Tidy the data set with the average of each measurement for each activity and each subject and generate “Week4_Assignment.txt” In current working directory. 
-
-
